@@ -1,0 +1,61 @@
+{
+  "script": "scripts/sts_truncation_and_attribution.py",
+  "timestamp_utc": "2026-11-01T21:01:57+00:00",
+  "protocol_id": "PROTO-v1",
+  "seeds": {
+    "random_K": "0-99",
+    "tie_break": 7,
+    "autocorr_perm": 3000,
+    "d_only_random": "1000-1099",
+    "i_only_random": "2000-2099",
+    "bootstrap": "9000+task_index"
+  },
+  "git_commit": "960a253539e5031fc71c41708d2afb9fa656c4b2",
+  "git_dirty": true,
+  "git_dirty_paths": [
+    "M PLAN.md",
+    " M README.md",
+    " M docs/DECISIONS.md",
+    " M docs/PROTOCOL.md",
+    " M scripts/paper_extract_embeddings.py",
+    " M scripts/paper_report.py",
+    " M scripts/paper_truncation_and_attribution.py",
+    " M scripts/sts_dimension_diagnostics.py",
+    " M scripts/sts_extract_embeddings.py",
+    " M scripts/sts_report_truncation_and_attribution.py",
+    " M scripts/sts_truncation_and_attribution.py",
+    " M src/fyp/models.py",
+    " M src/fyp/paths.py",
+    " M src/fyp/protocol.py",
+    "?? scripts/paper_report_mrl_pair.py",
+    "?? scripts/timing_primitives.py",
+    "?? src/fyp/timing.py",
+    "?? tests/test_models_timing.py"
+  ],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070",
+  "cpu_fallback_reason": null,
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "note": "all ablation arithmetic is float64 numpy on CPU (closed form); device field records torch device selection only",
+  "models": [
+    "bert-mrl",
+    "bert-no-mrl"
+  ],
+  "raw_parts_computed_at_commit": {
+    "bert-mrl": "960a253539e5031fc71c41708d2afb9fa656c4b2",
+    "bert-no-mrl": "960a253539e5031fc71c41708d2afb9fa656c4b2"
+  }
+}

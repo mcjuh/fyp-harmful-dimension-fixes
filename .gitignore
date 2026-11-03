@@ -1,0 +1,19 @@
+# Environments and bytecode
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Embedding caches (large, regenerable with the extract scripts; checksums in results/audit/cache_manifest_full.json)
+results/cache/
+*.npy
+*.pt
+
+# Per-model intermediate parts (regenerable with each script's --reuse-parts)
+results/**/_parts/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db

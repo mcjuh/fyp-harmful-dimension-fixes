@@ -1,0 +1,15 @@
+model,task,rho_full
+bert-mrl,sts12_test,0.7142136368107275
+bert-mrl,sts13_test,0.7797804099478715
+bert-mrl,sts14_test,0.761223010437241
+bert-mrl,sts15_test,0.8238827309225338
+bert-mrl,sts16_test,0.7694935222600181
+bert-mrl,stsb_test,0.8006368579240023
+bert-mrl,sickr_test,0.7403416095107676
+bert-no-mrl,sts12_test,0.7147153116667591
+bert-no-mrl,sts13_test,0.8001891464089984
+bert-no-mrl,sts14_test,0.7749012392007819
+bert-no-mrl,sts15_test,0.8132029702400235
+bert-no-mrl,sts16_test,0.7728281643806053
+bert-no-mrl,stsb_test,0.7886785260313297
+bert-no-mrl,sickr_test,0.7392758627878444

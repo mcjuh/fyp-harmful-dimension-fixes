@@ -1,0 +1,13 @@
+model,suite,stage,role,seconds
+bert-mrl,sts,load_tasks,load,9.36171770002693
+bert-mrl,sts,closed_form_spot_check,bookkeeping,0.4561360999941826
+bert-mrl,sts,attribution_leave_one_out_and_ranking,one_time,8.260159100173041
+bert-mrl,sts,truncation_curves_R1_R2,bookkeeping,86.72634709998965
+bert-mrl,sts,removal_curves_R4,bookkeeping,132.82835149997845
+bert-mrl,sts,headline_bootstrap,bookkeeping,186.60828069993295
+bert-no-mrl,sts,load_tasks,load,9.158136300044134
+bert-no-mrl,sts,closed_form_spot_check,bookkeeping,0.5199156999588013
+bert-no-mrl,sts,attribution_leave_one_out_and_ranking,one_time,8.352839499944821
+bert-no-mrl,sts,truncation_curves_R1_R2,bookkeeping,88.34846010012552
+bert-no-mrl,sts,removal_curves_R4,bookkeeping,132.93037039996125
+bert-no-mrl,sts,headline_bootstrap,bookkeeping,183.14582009986043

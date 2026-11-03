@@ -1,0 +1,24 @@
+{
+  "script": "inline (SHA-256 of every file under results/cache after the 2026-10-12 re-extraction)",
+  "timestamp_utc": "2026-10-12T13:10:35+00:00",
+  "protocol_id": null,
+  "seeds": {},
+  "git_commit": "cd085b0cf61e3e1a3c362e8e2cefb5f36ae060f2",
+  "git_dirty": false,
+  "git_dirty_paths": [],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cpu (no model computation)",
+  "n_files": 479,
+  "total_bytes": 41883643025,
+  "note": "extract.meta.json files embed timestamps/commit and are not expected to match older manifests"
+}

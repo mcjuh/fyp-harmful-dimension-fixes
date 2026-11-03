@@ -1,0 +1,65 @@
+{
+  "script": "scripts/sts_truncation_and_attribution.py",
+  "timestamp_utc": "2026-11-03T18:27:49+00:00",
+  "protocol_id": "PROTO-v1",
+  "seeds": {
+    "random_K": "0-99",
+    "tie_break": 7,
+    "autocorr_perm": 3000,
+    "d_only_random": "1000-1099",
+    "i_only_random": "2000-2099",
+    "bootstrap": "9000+task_index"
+  },
+  "git_commit": "df8d21ee89baae59b679c4eb0e10435d1d9c0709",
+  "git_dirty": true,
+  "git_dirty_paths": [
+    "M figures/sts_ablation_r1_truncation.png",
+    " M figures/sts_ablation_r1_truncation.png.meta.json",
+    " M figures/sts_ablation_r3_scores.png",
+    " M figures/sts_ablation_r3_scores.png.meta.json",
+    " M figures/sts_ablation_r4_P0.png",
+    " M figures/sts_ablation_r4_P0.png.meta.json",
+    " M figures/sts_ablation_r4_P1.png",
+    " M figures/sts_ablation_r4_P1.png.meta.json",
+    " M figures/sts_ablation_r4_P2.png",
+    " M figures/sts_ablation_r4_P2.png.meta.json",
+    " M figures/sts_ablation_r4_per_task.png",
+    " M figures/sts_ablation_r4_per_task.png.meta.json",
+    " M figures/sts_baselines_layer_curves.png",
+    " M figures/sts_baselines_layer_curves.png.meta.json"
+  ],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070",
+  "cpu_fallback_reason": null,
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "note": "all ablation arithmetic is float64 numpy on CPU (closed form); device field records torch device selection only",
+  "models": [
+    "bert-raw",
+    "sup-simcse",
+    "unsup-simcse",
+    "sbert-nli",
+    "roberta-raw",
+    "distilbert-raw"
+  ],
+  "raw_parts_computed_at_commit": {
+    "bert-raw": "312097f1da0b91288fb78945a53088e5bcfa1fac",
+    "sup-simcse": "df8d21ee89baae59b679c4eb0e10435d1d9c0709",
+    "unsup-simcse": "df8d21ee89baae59b679c4eb0e10435d1d9c0709",
+    "sbert-nli": "312097f1da0b91288fb78945a53088e5bcfa1fac",
+    "roberta-raw": "312097f1da0b91288fb78945a53088e5bcfa1fac",
+    "distilbert-raw": "312097f1da0b91288fb78945a53088e5bcfa1fac"
+  }
+}

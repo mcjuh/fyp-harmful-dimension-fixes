@@ -1,0 +1,27 @@
+{
+  "script": "scripts/report_matryoshka.py",
+  "timestamp_utc": "2026-11-03T23:25:02+00:00",
+  "protocol_id": "matryoshka",
+  "seeds": {},
+  "git_commit": null,
+  "git_dirty": null,
+  "git_dirty_paths": [],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cpu",
+  "device_name": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "cpu_fallback_reason": "CPU explicitly requested via --device cpu",
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "root": "D:\\fyp-public\\results\\matryoshka"
+}

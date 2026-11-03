@@ -1,0 +1,68 @@
+{
+  "script": "scripts/sts_dimension_diagnostics.py",
+  "timestamp_utc": "2026-11-03T18:28:09+00:00",
+  "protocol_id": "PROTO-v1",
+  "seeds": {
+    "split_half": "4000-4099",
+    "delta_bootstrap": "5000+task_index (R=0, E tasks 1-7)",
+    "rotations": "6000-6019",
+    "r6_null": 7000,
+    "r7_random_sets": "8000-8009",
+    "random_K": "0-99",
+    "r8_bootstrap": "9000+E task index"
+  },
+  "git_commit": "df8d21ee89baae59b679c4eb0e10435d1d9c0709",
+  "git_dirty": true,
+  "git_dirty_paths": [
+    "M figures/sts_ablation_r1_truncation.png",
+    " M figures/sts_ablation_r1_truncation.png.meta.json",
+    " M figures/sts_ablation_r3_scores.png",
+    " M figures/sts_ablation_r3_scores.png.meta.json",
+    " M figures/sts_ablation_r4_P0.png",
+    " M figures/sts_ablation_r4_P0.png.meta.json",
+    " M figures/sts_ablation_r4_P1.png",
+    " M figures/sts_ablation_r4_P1.png.meta.json",
+    " M figures/sts_ablation_r4_P2.png",
+    " M figures/sts_ablation_r4_P2.png.meta.json",
+    " M figures/sts_ablation_r4_per_task.png",
+    " M figures/sts_ablation_r4_per_task.png.meta.json",
+    " M figures/sts_baselines_layer_curves.png",
+    " M figures/sts_baselines_layer_curves.png.meta.json"
+  ],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070",
+  "cpu_fallback_reason": null,
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "note": "ablation arithmetic is float64 numpy on CPU; bootstrap Spearman is float64 torch on the device",
+  "models": [
+    "bert-raw",
+    "sup-simcse",
+    "unsup-simcse",
+    "sbert-nli",
+    "roberta-raw",
+    "distilbert-raw"
+  ],
+  "eval_tasks": [
+    "sts12_test",
+    "sts13_test",
+    "sts14_test",
+    "sts15_test",
+    "sts16_test",
+    "stsb_test",
+    "sickr_test"
+  ],
+  "smoke": false
+}

@@ -1,0 +1,27 @@
+{
+  "script": "scripts/sts_baselines.py",
+  "timestamp_utc": "2026-11-03T23:26:27+00:00",
+  "protocol_id": "sts",
+  "seeds": {},
+  "git_commit": null,
+  "git_dirty": null,
+  "git_dirty_paths": [],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070",
+  "cpu_fallback_reason": null,
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "note": "all Spearman arithmetic is float64 numpy on CPU; device field records torch device selection only"
+}

@@ -1,0 +1,13 @@
+prediction,suite,model,value,threshold,supported,random_mean,random_band_hi,other
+random_removal_robust,sts,bert-mrl,0.99574685668514,0.9,True,,,
+random_removal_robust,sts,bert-no-mrl,0.9966596593082272,0.9,True,,,
+random_removal_robust,ret,bert-mrl,0.9734640550906939,0.9,True,,,
+random_removal_robust,ret,bert-no-mrl,0.9704927075193224,0.9,True,,,
+random_removal_robust,cls,bert-mrl,0.9860659500553262,0.9,True,,,
+random_removal_robust,cls,bert-no-mrl,0.9868682757212767,0.9,True,,,
+mrl_prefix_above_random,sts,bert-mrl,0.9978049235097782,,False,0.99574685668514,0.9982617078059192,
+no_mrl_prefix_not_above_random,sts,bert-no-mrl,0.996821978077968,,True,0.9966596593082272,0.999186607055501,
+mrl_random_below_no_mrl,sts,bert-mrl < bert-no-mrl,0.99574685668514,,True,,,0.9966596593082272
+mrl_prefix_above_random,ret,bert-mrl,0.9971463178409053,,False,0.9734640550906939,1.0028861426270799,
+no_mrl_prefix_not_above_random,ret,bert-no-mrl,0.9704321883410844,,True,0.9704927075193224,0.9921848009177765,
+mrl_random_below_no_mrl,ret,bert-mrl < bert-no-mrl,0.9734640550906939,,False,,,0.9704927075193224

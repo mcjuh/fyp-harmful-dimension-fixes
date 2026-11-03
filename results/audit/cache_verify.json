@@ -1,0 +1,867 @@
+{
+  "n_sample": 200,
+  "seed": 1,
+  "models": {
+    "bert-raw": {
+      "files": {
+        "nli20k": {
+          "shape": [
+            20000,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_dev": {
+          "shape": [
+            916,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_test": {
+          "shape": [
+            5001,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_train": {
+          "shape": [
+            4789,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts12_test": {
+          "shape": [
+            4946,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts13_test": {
+          "shape": [
+            2638,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts14_test": {
+          "shape": [
+            6351,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts15_test": {
+          "shape": [
+            5170,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts16_test": {
+          "shape": [
+            1867,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_dev": {
+          "shape": [
+            2910,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_test": {
+          "shape": [
+            2552,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_train": {
+          "shape": [
+            10566,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        }
+      },
+      "reextract_gpu_vs_cache_max_abs_diff": 1.9073486328125e-06,
+      "reextract_pass": true,
+      "gpu_vs_cpu_max_abs_diff": 1.1444091796875e-05,
+      "gpu_vs_cpu_max_abs_diff_per_layer": [
+        9.5367431640625e-07,
+        9.5367431640625e-07,
+        1.9073486328125e-06,
+        2.384185791015625e-06,
+        1.9073486328125e-06,
+        2.86102294921875e-06,
+        2.86102294921875e-06,
+        3.337860107421875e-06,
+        4.291534423828125e-06,
+        5.245208740234375e-06,
+        9.059906005859375e-06,
+        1.1444091796875e-05,
+        6.794929504394531e-06
+      ],
+      "max_abs_value": 13.079614639282227
+    },
+    "sup-simcse": {
+      "files": {
+        "nli20k": {
+          "shape": [
+            20000,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_dev": {
+          "shape": [
+            916,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_test": {
+          "shape": [
+            5001,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_train": {
+          "shape": [
+            4789,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts12_test": {
+          "shape": [
+            4946,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts13_test": {
+          "shape": [
+            2638,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts14_test": {
+          "shape": [
+            6351,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts15_test": {
+          "shape": [
+            5170,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts16_test": {
+          "shape": [
+            1867,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_dev": {
+          "shape": [
+            2910,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_test": {
+          "shape": [
+            2552,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_train": {
+          "shape": [
+            10566,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        }
+      },
+      "reextract_gpu_vs_cache_max_abs_diff": 1.9073486328125e-06,
+      "reextract_pass": true,
+      "gpu_vs_cpu_max_abs_diff": 6.794929504394531e-06,
+      "gpu_vs_cpu_max_abs_diff_per_layer": [
+        7.152557373046875e-07,
+        1.430511474609375e-06,
+        1.9073486328125e-06,
+        1.9073486328125e-06,
+        2.384185791015625e-06,
+        2.86102294921875e-06,
+        2.86102294921875e-06,
+        2.384185791015625e-06,
+        3.337860107421875e-06,
+        4.291534423828125e-06,
+        4.291534423828125e-06,
+        4.76837158203125e-06,
+        6.794929504394531e-06
+      ],
+      "max_abs_value": 12.536492347717285
+    },
+    "unsup-simcse": {
+      "files": {
+        "nli20k": {
+          "shape": [
+            20000,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_dev": {
+          "shape": [
+            916,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_test": {
+          "shape": [
+            5001,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_train": {
+          "shape": [
+            4789,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts12_test": {
+          "shape": [
+            4946,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts13_test": {
+          "shape": [
+            2638,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts14_test": {
+          "shape": [
+            6351,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts15_test": {
+          "shape": [
+            5170,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts16_test": {
+          "shape": [
+            1867,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_dev": {
+          "shape": [
+            2910,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_test": {
+          "shape": [
+            2552,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_train": {
+          "shape": [
+            10566,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        }
+      },
+      "reextract_gpu_vs_cache_max_abs_diff": 1.9073486328125e-06,
+      "reextract_pass": true,
+      "gpu_vs_cpu_max_abs_diff": 4.291534423828125e-06,
+      "gpu_vs_cpu_max_abs_diff_per_layer": [
+        7.152557373046875e-07,
+        1.430511474609375e-06,
+        1.9073486328125e-06,
+        1.9073486328125e-06,
+        1.9073486328125e-06,
+        2.384185791015625e-06,
+        2.86102294921875e-06,
+        2.86102294921875e-06,
+        4.291534423828125e-06,
+        3.814697265625e-06,
+        3.814697265625e-06,
+        4.291534423828125e-06,
+        2.86102294921875e-06
+      ],
+      "max_abs_value": 9.968317031860352
+    },
+    "sbert-nli": {
+      "files": {
+        "nli20k": {
+          "shape": [
+            20000,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_dev": {
+          "shape": [
+            916,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_test": {
+          "shape": [
+            5001,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_train": {
+          "shape": [
+            4789,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts12_test": {
+          "shape": [
+            4946,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts13_test": {
+          "shape": [
+            2638,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts14_test": {
+          "shape": [
+            6351,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts15_test": {
+          "shape": [
+            5170,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts16_test": {
+          "shape": [
+            1867,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_dev": {
+          "shape": [
+            2910,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_test": {
+          "shape": [
+            2552,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_train": {
+          "shape": [
+            10566,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        }
+      },
+      "reextract_gpu_vs_cache_max_abs_diff": 1.2740492820739746e-06,
+      "reextract_pass": true,
+      "gpu_vs_cpu_max_abs_diff": 6.198883056640625e-06,
+      "gpu_vs_cpu_max_abs_diff_per_layer": [
+        4.76837158203125e-07,
+        9.5367431640625e-07,
+        1.9073486328125e-06,
+        2.384185791015625e-06,
+        2.384185791015625e-06,
+        3.814697265625e-06,
+        2.86102294921875e-06,
+        2.86102294921875e-06,
+        3.337860107421875e-06,
+        3.337860107421875e-06,
+        4.76837158203125e-06,
+        6.198883056640625e-06,
+        4.5299530029296875e-06
+      ],
+      "max_abs_value": 10.465816497802734,
+      "sbert_encode_vs_ours": {
+        "st_max_seq_length": 128,
+        "st_modules": [
+          "Transformer",
+          "Pooling"
+        ],
+        "min_cosine": 0.9999999999999963,
+        "pass_0.9999": true
+      }
+    },
+    "roberta-raw": {
+      "files": {
+        "nli20k": {
+          "shape": [
+            20000,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_dev": {
+          "shape": [
+            916,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_test": {
+          "shape": [
+            5001,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_train": {
+          "shape": [
+            4789,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts12_test": {
+          "shape": [
+            4946,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts13_test": {
+          "shape": [
+            2638,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts14_test": {
+          "shape": [
+            6351,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts15_test": {
+          "shape": [
+            5170,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts16_test": {
+          "shape": [
+            1867,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_dev": {
+          "shape": [
+            2910,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_test": {
+          "shape": [
+            2552,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_train": {
+          "shape": [
+            10566,
+            13,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        }
+      },
+      "reextract_gpu_vs_cache_max_abs_diff": 3.814697265625e-06,
+      "reextract_pass": true,
+      "gpu_vs_cpu_max_abs_diff": 8.58306884765625e-06,
+      "gpu_vs_cpu_max_abs_diff_per_layer": [
+        7.152557373046875e-07,
+        3.814697265625e-06,
+        5.7220458984375e-06,
+        5.7220458984375e-06,
+        5.7220458984375e-06,
+        5.7220458984375e-06,
+        5.7220458984375e-06,
+        5.7220458984375e-06,
+        7.62939453125e-06,
+        7.62939453125e-06,
+        7.62939453125e-06,
+        8.58306884765625e-06,
+        6.67572021484375e-06
+      ],
+      "max_abs_value": 22.873991012573242
+    },
+    "distilbert-raw": {
+      "files": {
+        "nli20k": {
+          "shape": [
+            20000,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_dev": {
+          "shape": [
+            916,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_test": {
+          "shape": [
+            5001,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sickr_train": {
+          "shape": [
+            4789,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts12_test": {
+          "shape": [
+            4946,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts13_test": {
+          "shape": [
+            2638,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts14_test": {
+          "shape": [
+            6351,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts15_test": {
+          "shape": [
+            5170,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "sts16_test": {
+          "shape": [
+            1867,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_dev": {
+          "shape": [
+            2910,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_test": {
+          "shape": [
+            2552,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        },
+        "stsb_train": {
+          "shape": [
+            10566,
+            7,
+            768
+          ],
+          "dtype": "float32",
+          "shape_ok": true,
+          "all_finite": true
+        }
+      },
+      "reextract_gpu_vs_cache_max_abs_diff": 2.86102294921875e-06,
+      "reextract_pass": true,
+      "gpu_vs_cpu_max_abs_diff": 5.7220458984375e-06,
+      "gpu_vs_cpu_max_abs_diff_per_layer": [
+        9.5367431640625e-07,
+        1.9073486328125e-06,
+        1.9073486328125e-06,
+        2.86102294921875e-06,
+        4.76837158203125e-06,
+        5.7220458984375e-06,
+        2.7418136596679688e-06
+      ],
+      "max_abs_value": 15.400924682617188
+    }
+  }
+}

@@ -1,0 +1,13 @@
+model,suite,stage,role,seconds
+sup-simcse,sts,load_tasks,load,3.2392609000671655
+sup-simcse,sts,closed_form_spot_check,bookkeeping,0.40845449990592897
+sup-simcse,sts,attribution_leave_one_out_and_ranking,one_time,8.184362899977714
+sup-simcse,sts,truncation_curves_R1_R2,bookkeeping,96.11876310012303
+sup-simcse,sts,removal_curves_R4,bookkeeping,134.49582149996422
+sup-simcse,sts,headline_bootstrap,bookkeeping,192.9386633001268
+unsup-simcse,sts,load_tasks,load,9.006722300080582
+unsup-simcse,sts,closed_form_spot_check,bookkeeping,0.38244020007550716
+unsup-simcse,sts,attribution_leave_one_out_and_ranking,one_time,9.38005269994028
+unsup-simcse,sts,truncation_curves_R1_R2,bookkeeping,94.73372119991109
+unsup-simcse,sts,removal_curves_R4,bookkeeping,138.08643859997392
+unsup-simcse,sts,headline_bootstrap,bookkeeping,193.70133900013752
