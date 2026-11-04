@@ -46,7 +46,8 @@ not computed while the design is still being changed.
 | 7 | `retrieval_classification_truncation_and_ranked_removal.py --suite ret\|cls --split test` | `results/retrieval_classification/{retrieval,classification}/` |
 | 8 | `transformations.py --suite sts\|ret\|cls --split test` | `results/transformations/` |
 | 9 | `timing_benchmark.py` | `results/timing/` |
-| 10 | `report_sts.py`, `report_sts_diagnostics.py`, `report_retrieval_classification.py` (and `--transforms`), `report_matryoshka.py`, `figures_summary.py` | summary tables, reports and the three figures in `figures/` |
+| 10 | `sts_geometry_vs_harm.py`, `suite_geometry_vs_harm.py --suite ret\|cls` | `geometry_vs_harm_*.csv` in `results/sts/diagnostics/` and `results/retrieval_classification/{retrieval,classification}/` (per-dimension geometry against harm) |
+| 11 | `report_sts.py`, `report_sts_diagnostics.py`, `report_retrieval_classification.py` (and `--transforms`), `report_matryoshka.py`, `figures_summary.py` | summary tables, reports and the three figures in `figures/` |
 
 The Matryoshka pair is run with the same scripts, using `--models bert-mrl bert-no-mrl --out results/matryoshka/<sts|retrieval|classification>`.
 

@@ -1,0 +1,43 @@
+{
+  "script": "scripts/suite_geometry_vs_harm.py",
+  "timestamp_utc": "2026-11-04T04:22:12+00:00",
+  "protocol_id": "classification",
+  "seeds": {
+    "random_pairs": 11000,
+    "row_subsample": 11001
+  },
+  "git_commit": "f60c6cab0206158ecb7e685e48313b11087d2a2f",
+  "git_dirty": true,
+  "git_dirty_paths": [
+    "M results/matryoshka/sts/geometry_vs_harm_by_dimension.csv.meta.json",
+    " M results/matryoshka/sts/geometry_vs_harm_by_model.csv",
+    " M results/matryoshka/sts/geometry_vs_harm_by_model.csv.meta.json",
+    " M results/sts/diagnostics/geometry_vs_harm_by_dimension.csv.meta.json",
+    " M results/sts/diagnostics/geometry_vs_harm_by_model.csv",
+    " M results/sts/diagnostics/geometry_vs_harm_by_model.csv.meta.json",
+    " M scripts/sts_geometry_vs_harm.py",
+    "?? scripts/suite_geometry_vs_harm.py",
+    "?? src/fyp/geometry.py"
+  ],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070",
+  "cpu_fallback_reason": null,
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "suite": "cls",
+  "n_random_pairs": 20000,
+  "n_top": 7,
+  "max_rows": 20000
+}

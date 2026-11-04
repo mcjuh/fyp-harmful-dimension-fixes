@@ -1,0 +1,32 @@
+{
+  "script": "scripts/timing_benchmark.py",
+  "timestamp_utc": "2026-11-03T21:42:00+00:00",
+  "protocol_id": "timing",
+  "seeds": {},
+  "git_commit": "1493968d4f24b25e4981effd95af2c2e0766315b",
+  "git_dirty": false,
+  "git_dirty_paths": [],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070",
+  "cpu_fallback_reason": null,
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "smoke": false,
+  "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "cpu_count": 16,
+  "torch_threads": 8,
+  "note": "median/IQR over repeats after warm-up, CUDA synchronised; attribution is the repository's closed-form float64 code; search is fp32 matmul + top-10 on random unit vectors (64 queries); nothing else ran on the GPU",
+  "git_commit_note": "git_commit is the commit of the private working repository, where this script is named scripts/timing_primitives.py; the code is identical apart from the script name, protocol id and output file name"
+}
