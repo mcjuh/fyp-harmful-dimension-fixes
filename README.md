@@ -7,6 +7,10 @@ all-but-the-top, whitening) and a timing benchmark. No encoder is trained or mod
 
 Author: Marcus Chee Jen An (mcjuh).
 
+## Status
+
+This release covers the width axis: interventions on the dimensions of the final-layer embedding. Work on the depth axis (which layers to read or remove) is under way as of writing, and work on embedding precision is planned.
+
 ## Models and tasks
 
 Eight 768-d encoders are evaluated at the final layer. `bert-raw`, `roberta-raw` and `distilbert-raw` use mean pooling over tokens, as do `sbert-nli` and the Matryoshka pair
