@@ -1,0 +1,13 @@
+model,property,spearman_with_delta
+bert-mrl,mean_abs,0.07353442791311969
+bert-mrl,mean_z_abs,0.07323953012174839
+bert-mrl,variance,0.08468552218207835
+bert-mrl,kurtosis,-0.12339414218333296
+bert-mrl,cos_contrib,0.10442621663617728
+bert-mrl,pc_energy,0.17185587349933792
+bert-no-mrl,mean_abs,0.12124913957238019
+bert-no-mrl,mean_z_abs,0.12347006538402198
+bert-no-mrl,variance,-0.042342443199061414
+bert-no-mrl,kurtosis,-0.11631537660450676
+bert-no-mrl,cos_contrib,0.0329109061108163
+bert-no-mrl,pc_energy,0.1326881645001975
