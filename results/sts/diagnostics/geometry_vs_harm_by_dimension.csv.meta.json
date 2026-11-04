@@ -1,0 +1,30 @@
+{
+  "script": "scripts/sts_geometry_vs_harm.py",
+  "timestamp_utc": "2026-11-04T02:50:38+00:00",
+  "protocol_id": "sts",
+  "seeds": {
+    "random_pairs": 11000
+  },
+  "git_commit": "ea7e42072ec0b1d6ec6db02f97c16470e9e352e6",
+  "git_dirty": false,
+  "git_dirty_paths": [],
+  "libraries": {
+    "python": "3.14.0",
+    "torch_cuda": "13.2",
+    "torch": "2.14.0+cu132",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.1.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "datasets": "5.0.1"
+  },
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 5070",
+  "cpu_fallback_reason": null,
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "float32_matmul_precision": "highest",
+  "n_random_pairs": 20000,
+  "n_top": 7
+}
