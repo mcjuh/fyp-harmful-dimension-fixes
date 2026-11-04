@@ -12,7 +12,8 @@ Per-dimension table: Spearman(Delta, property) within each model.
 Per-model table: mean cosine of random sentence pairs (Ethayarajh), effective rank (Roy & Vetterli), IsoScore (Rudman et al.), the share of the
 mean cosine held by the single largest dimension, and the fraction of degrading dimensions (Delta > 0).
 
-Usage: python scripts/sts_geometry_vs_harm.py [--models ...] [--out DIR]
+Usage: python scripts/sts_geometry_vs_harm.py [--models ...] [--out DIR] [--truncation-dir DIR]
+       Matryoshka pair: --models bert-mrl bert-no-mrl --truncation-dir results/matryoshka/sts --out results/matryoshka/sts
 Outputs: geometry_vs_harm_by_dimension.csv, geometry_vs_harm_by_model.csv (+ .meta.json) in --out.
 """
 
@@ -86,9 +87,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", nargs="+")
     ap.add_argument("--out", default=str(STS_DIAGNOSTICS))
+    ap.add_argument("--truncation-dir", default=str(STS_TRUNCATION), help="folder holding leave_one_out_scores.csv")
     args = ap.parse_args()
     dev = setup_device()
-    scores = pd.read_csv(STS_TRUNCATION / "leave_one_out_scores.csv")
+    scores = pd.read_csv(Path(args.truncation_dir) / "leave_one_out_scores.csv")
     scores = scores[scores["protocol"] == "train_ranked"]
     models = args.models or list(scores["model"].unique())
 
