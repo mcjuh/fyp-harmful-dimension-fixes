@@ -1,4 +1,4 @@
-"""Dataset registry for the rollback protocol, with every Hub revision pinned.
+"""Dataset registry, with every Hub revision pinned.
 
 Split roles:
   E   (evaluation, locked): STS12-16 test, STS-B test, SICK-R test

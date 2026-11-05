@@ -1,15 +1,15 @@
 """NanoBEIR retrieval.
 
-13 datasets from `sentence-transformers/NanoBEIR-en` at a pinned revision. Per dataset: ~50 queries, 2.2k-5.7k
+13 datasets from `sentence-transformers/NanoBEIR-en` at a pinned revision. Per dataset: ~50 queries, 2.2k-6.0k
 documents (title is not a separate field). Binary relevance. Metric: nDCG@10 with cosine similarity, per
-query, macro-averaged over queries; BEIR's `ignore_identical_ids` convention (a document whose id equals the
-query id is never retrieved; matters for Quora/ArguAna).
+query, macro-averaged over queries; BEIR's `ignore_identical_ids` convention, extended to identical text (a document
+whose id or normalised text equals the query's is never retrieved; matters for ArguAna).
 
 Dev/test split (eval lock): per dataset a seeded 20% of queries is dev, the rest test. Corpora are shared.
 
 Cache (results/cache/ret/, gitignored):
   sentences/{key}.json   {"info", "corpus_ids", "corpus_texts", "query_ids", "query_texts"}
-  sentences/{key}.npz    qrel_q, qrel_d (row pairs), excl_q, excl_d (identical-id pairs), dev_q, test_q (query rows)
+  sentences/{key}.npz    qrel_q, qrel_d (row pairs), excl_q, excl_d (identical id or text pairs), dev_q, test_q (query rows)
   {model}/{key}.corpus.npy, {key}.queries.npy   float32 (n, n_hidden_states, 768)
 """
 

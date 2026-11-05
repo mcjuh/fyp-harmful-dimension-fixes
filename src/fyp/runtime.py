@@ -1,7 +1,7 @@
 """Device selection, numerics settings, and per-result-file run metadata.
 
 Every script that produces a result calls `setup_device()` once and passes the returned
-dict to `run_metadata()` when writing outputs (rollback rule 5: git commit, library
+dict to `run_metadata()` when writing outputs (git commit, library
 versions, device actually used, seeds, protocol id, timestamp on every result file).
 """
 

@@ -1,11 +1,11 @@
 """Suite extraction: ALL hidden-state layers for the NanoBEIR retrieval corpora/queries and for the
-12 MTEB classification tasks' texts (dev, test and the few-shot draws), for the six frozen encoders.
+12 MTEB classification tasks' texts (dev, test and the few-shot draws), for the frozen encoders (the six main models by default).
 
 Cache (gitignored):
   results/cache/ret/{model}/{dataset}.corpus.npy|.queries.npy     float32 (n, n_hidden_states, 768), max_length 512
   results/cache/cls_all/{model}/{task}.emb.npy                    float32 (n_unique_texts, n_hidden_states, 768), max_length 128
   results/cache/ret/sentences/, results/cache/cls_all/sentences/  ids, texts, qrels, splits, few-shot draws
-Same controlled config as the STS extraction (fp32, TF32 off, attention-mask mean pooling, revision-pinned models);
+Same controlled config as the STS extraction (fp32, TF32 off, pooling per model, revision-pinned models);
 retrieval uses max_length 512 and length-sorted batches. The classification final layer is checked against
 the sklearn-probe cache (results/cache/cls) for the 11 tasks both cover.
 
@@ -133,7 +133,7 @@ def main():
                 check = float(np.abs(a1 - emb[:, -1, :]).max())
                 assert a1.shape == emb[:, -1, :].shape and check < 1e-3, (model_key, key, check)
             per["cls"][key] = {"n_texts": len(texts), "n_truncated_at_128": n_trunc, "max_abs_diff_final_layer_vs_A1": check}
-            print(f"  {model_key:15s} cls {key:22s} {emb.shape} trunc={n_trunc} vs-A1 maxdiff={check} ({time.time() - t0:.0f}s)", flush=True)
+            print(f"  {model_key:15s} cls {key:22s} {emb.shape} trunc={n_trunc} vs-sklearn-cache maxdiff={check} ({time.time() - t0:.0f}s)", flush=True)
         meta = run_metadata(dev, script="scripts/extract_retrieval_classification_embeddings.py", protocol_id=PROTOCOL, extra={
             "model": enc.spec.__dict__, "dtype": "float32", "pooling": enc.spec.pooling + " (all hidden states)", "cache_name": enc.spec.cache_dir_name,
             "ret_max_length": RET_MAX_LENGTH, "cls_max_length": 128, "per_set": per, "seconds": round(time.time() - t0, 1)})

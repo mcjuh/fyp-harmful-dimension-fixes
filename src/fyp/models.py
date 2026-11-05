@@ -4,12 +4,11 @@ Controlled extraction config (one config for every model):
   - revision-pinned HF checkpoints, fp32, eval mode, TF32 off (set by fyp.runtime.setup_device)
   - max_length 128 with truncation (truncated-sentence count is logged by the caller)
   - only the inputs a model actually uses are passed: DistilBERT gets no token_type_ids
-    (its tokenizer returns them in transformers 5.x; the pre-rollback encoder passed
-    them via **inputs and relied on the model ignoring them)
+    (its tokenizer returns them in transformers 5.x)
   - pooling per model (`ModelSpec.pooling`): attention-mask-aware mean of every hidden state (layer 0 = embedding output) for every
     model except the SimCSE pair, which is read at the [CLS] token (`cls`: token 0 of each hidden state; `cls_pooler`: the same, but
     the final slot is the checkpoint's pooler output, the SimCSE "cls" setting)
-  - fixed batch policy: input order, batch size 128, no length sorting
+  - default batch policy: input order, batch size 128, no length sorting (see `encode` for the length-sorted option)
 """
 
 from dataclasses import dataclass
@@ -106,7 +105,7 @@ class LayerwiseEncoder:
         layers are pooled and stored: (len(sentences), len(layers), 768).
 
         Defaults reproduce the controlled STS extraction config exactly (max_length 128, input order, CPU pooling).
-        The A2 retrieval extraction passes max_length=512, sort_by_length=True (length-sorted batches; padding
+        The retrieval extraction passes max_length=512, sort_by_length=True (length-sorted batches; padding
         is masked, so a sentence's embedding is unchanged up to fp32 noise) and pool_on_device=True (the same
         masked mean computed on the GPU, which avoids copying 13 x batch x 512 x 768 floats to the CPU)."""
         layers = list(range(self.num_layers)) if layers is None else list(layers)

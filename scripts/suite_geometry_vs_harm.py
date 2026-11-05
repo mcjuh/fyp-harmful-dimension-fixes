@@ -1,6 +1,6 @@
 """Does a dimension's geometry predict whether deleting it helps?  Retrieval and classification suites, final layer, float64.
 
-One fold per dataset t. Harm is the held-out (held-out) score of fold t: Delta(d) averaged over the OTHER datasets, so it never
+One fold per dataset t. Harm is the held-out score of fold t: Delta(d) averaged over the OTHER datasets, so it never
 uses dataset t's labels or relevance judgements. Geometry is measured on the unlabelled embeddings of dataset t itself
 (retrieval: the corpus; classification: all rows of the task), capped at 20,000 random rows (seed 11001). Properties are those of
 scripts/sts_geometry_vs_harm.py, with the cosine contribution taken over random pairs of the dataset (there are no sentence pairs).

@@ -43,7 +43,6 @@ N_FID_RANDOM = 10                      # random-K seeds that also get the label-
 
 # ---- the authors' task lists, copied verbatim
 # Source: sobamchan/random-embedding-truncation, src/random_embedding_truncation/utils.py, commit 780eb94.
-# tests/test_paper_task_sets.py checks that our tasks (classification.CLS_TASKS, retrieval.RET_KEYS) are exactly these sets.
 def convert_dataset_name_for_nanobeir(dataset_name: str) -> str:
     if dataset_name == "climate-fever":
         dataset_name = "climatefever"

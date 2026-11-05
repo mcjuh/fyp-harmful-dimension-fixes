@@ -27,7 +27,7 @@ def keep_from_order(order, ns) -> np.ndarray:
 
 
 def paired_experiments(task, seed, B):
-    """Classification pairs random-K seed s with few-shot experiment s (A1); retrieval has no experiments."""
+    """Classification pairs random-K seed s with few-shot experiment s; retrieval has no experiments."""
     return np.full(B, seed % task.E) if task.kind == "cls" else None
 
 
@@ -119,7 +119,7 @@ def run_outliers(tasks: dict, mu: np.ndarray, model: str) -> tuple:
 # ------------------------------------------------------------------ headline paired bootstrap
 def run_headline_ci(tasks: dict, units: dict, model: str) -> pd.DataFrame:
     """Paired bootstrap (1000 resamples of queries / test items, same indices for every method) of RP at K = 25, 50:
-    random-K mean, last-K, and best-/worst-first under in_sample (in-sample) and held_out."""
+    random-K mean, last-K, and best-/worst-first under in_sample and held_out."""
     kind = next(iter(tasks.values())).kind
     names = list(tasks)
     seeds = list(random_seeds(kind))

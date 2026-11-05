@@ -9,7 +9,7 @@ model at one layer, and exposes, for a (B, 768) boolean KEEP-mask array:
                                             agreement of predictions with the full-embedding probe (classification)
     base() -> float,  single_deltas() -> (768,)
 `exps` only matters for classification (10 few-shot experiments): None = average over all experiments; an int array of
-length B pairs mask i with experiment exps[i] (used for the random-K masks, as A1 does).
+length B pairs mask i with experiment exps[i] (used for the random-K masks).
 """
 
 from typing import Dict, Optional

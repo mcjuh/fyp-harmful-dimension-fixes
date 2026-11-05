@@ -77,10 +77,10 @@ def run_model(model, smoke):
     base_mean = np.mean([base[k] for k in EVAL])
     dR = R.single_deltas()
     dE = {k: E[k].single_deltas() for k in EVAL}
-    if not smoke:  # consistency with sts_ablation (same data, same code path)
+    if not smoke:  # consistency with the truncation and ranked-removal run (same data, same code path)
         s4 = pd.read_csv(ABLATION_RESULTS / "leave_one_out_scores.csv")
         s4 = s4[(s4["model"] == model) & (s4["protocol"] == "train_ranked")].sort_values("dim")["score"].to_numpy()
-        assert np.max(np.abs(s4 - dR)) < 1e-12, "train_ranked score differs from the sts_ablation result"
+        assert np.max(np.abs(s4 - dR)) < 1e-12, "train_ranked score differs from the truncation and ranked-removal result"
     out = {}
 
     # ---- split-half reliability: split-half reliability of the train_ranked score ----
@@ -203,7 +203,7 @@ def run_model(model, smoke):
         here = r8[r8["method"] == "random"].groupby("seed")["rho"].mean().mean() / base_mean
         assert abs(s4 - here) < 1e-12, (s4, here)
 
-    # headline-style paired bootstrap (seed 9000 + task index, as in sts_ablation): PCA-384 vs random-50%
+    # headline-style paired bootstrap (seed 9000 + task index, as in the truncation and ranked-removal run): PCA-384 vs random-50%
     boot = {}
     for ti, k in enumerate(EVAL):
         cols = [E[k].cos_full()[:, None], Ec[k].cos_full()[:, None], Ep[k].cos_nested(drop_low, [N50])]

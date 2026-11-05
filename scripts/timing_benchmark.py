@@ -32,7 +32,7 @@ from fyp.runtime import add_device_args, run_metadata, save_table, setup_device
 from fyp.suite import load_tasks
 
 PROTOCOL_ID = "timing"
-RET_SAMPLE = ["scifact", "nfcorpus", "fiqa2018"]    # small, medium, large NanoBEIR corpora (dev queries only)
+RET_SAMPLE = ["scifact", "nfcorpus", "fiqa2018"]    # NanoBEIR corpora of 2,919, 2,953 and 4,598 documents (dev queries only)
 KEPT = [(0, N_DIMS), (25, N_DIMS - n_remove(25)), (50, N_DIMS - n_remove(50)), (75, N_DIMS - n_remove(75))]
 
 

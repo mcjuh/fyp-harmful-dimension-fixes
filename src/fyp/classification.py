@@ -1,11 +1,11 @@
 """MTEB classification tasks and the linear probe.
 
 Protocol = MTEB's own classification protocol, so the numbers are comparable to the paper:
-  - probe: L2 logistic regression on frozen final-layer mean-pooled embeddings
-    (sklearn defaults, C=1, lbfgs, max_iter=100, no feature scaling)
+  - probe: L2 logistic regression on frozen final-layer embeddings (C=1, no feature scaling). The reported runs solve it to
+    convergence with fyp.probe_gpu; `fit_probe` below is the sklearn version (lbfgs, max_iter=100)
   - training set: `N_EXPERIMENTS` (10) few-shot draws of `SAMPLES_PER_LABEL` (8) examples per label
     from the train pool; the same test set is scored after every draw
-  - metrics: accuracy (main) and macro-F1
+  - metric: accuracy (`fit_probe` also returns macro-F1)
 
 Dimension deletion for a linear probe: the kept columns are selected *before* fitting, so a
 deleted coordinate never reaches the probe (identical to zeroing it, because L2 drives the
@@ -16,7 +16,7 @@ Splits per task (all model-independent, fixed by seeds below):
   test  <= TEST_CAP rows (seeded subsample of the Hub test split); the whole split with full_test=True
   dev   <= DEV_CAP rows: the Hub validation split if there is one, else a seeded carve of the
         train split. The carve is removed from the train pool in every mode. Dev is only for
-        development (`--eval-split dev`); the eval lock applies to test.
+        development (`--split dev`); the eval lock applies to test.
   pool  the rest of the train split, from which the few-shot draws are taken
 """
 
@@ -59,13 +59,13 @@ CLS_TASKS: Dict[str, ClsTask] = {t.key: t for t in [
     ClsTask("mtop_intent", "mteb/mtop_intent", "9a200bf94b01afa0438a39c54f6a3aceaf78856f", "en", "files", "{config}/{split}-00000-of-00001.parquet"),
     ClsTask("toxic_conversations", "mteb/toxic_conversations_50k", "3969dd5d574dfe3a2427e3a544b64ee8dcaf9936", None, "hub", None),
     ClsTask("tweet_sentiment", "mteb/tweet_sentiment_extraction", "7261898ee3b9a739595e8dbf41df6b2332f429bb", None, "hub", None),
-    # A2: the paper's 12th task. 3.6M-row train split -> seeded 100k sample; test capped at TEST_CAP as the others.
+    # The paper's 12th task. 3.6M-row train split -> seeded 100k sample.
     ClsTask("amazon_polarity", "mteb/amazon_polarity", "ec149c1fe36043668a50804214d4597804001f6f", None, "shards", None,
             shards={"train": tuple(f"data/train-0000{i}-of-00004.parquet" for i in range(4)),
                     "test": ("data/test-00000-of-00001.parquet",)}, train_cap=100_000),
 ]}
-ALL_CLS_KEYS = list(CLS_TASKS)       # the paper's 12 tasks (A2)
-CLS_KEYS = ALL_CLS_KEYS[:11]         # the 11 A1 tasks: the defaults of the A1 scripts, which must not change
+ALL_CLS_KEYS = list(CLS_TASKS)       # the paper's 12 tasks
+CLS_KEYS = ALL_CLS_KEYS[:11]         # the 11 tasks of the earlier sklearn-probe pass; extraction checks against its cache if present
 POOL_SEED = 34000                    # train sample for tasks with a train_cap
 
 
